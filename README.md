@@ -1,67 +1,96 @@
-# [Your Project Name Here]
-> A short one-line tagline for your quiz or questionnaire
+# Basketball Quiz
+
+> A short quiz to test how much you know about basketball.
 
 ## Overview
-> **DELETE AND REPLACE ME:** Describe your program's focus, the type of
-> program it is (quiz, personality test, or recommendation tool), and the
-> final output a user will receive. Make it clear how user input and
-> conditional logic work together to produce that result.
->
-> Example: "This program quizzes users on Impressionist art. Based on
-> their answers, users earn points, and their final score determines
-> their level of knowledge on the topic."
+
+This program is a basketball knowledge quiz. It asks the user five questions about basketball and gives them three answer choices for each question. The user's answers are used in conditional statements to determine if they are correct. Each correct answer adds one point to the user's score. At the end, the program shows the user's final score out of five and gives them a message based on their score.
 
 ## Sample Questions and Responses
-> **DELETE AND REPLACE ME:** List at least five questions you'll ask the
-> user, along with the possible responses for each. Keep every question
-> closed-ended (numbered options or yes/no) so each response can be
-> handled directly by an `if`, `elif`, or `else` statement.
->
-> Example:
-> Which of the following painters is an Impressionist?
-> 1. Monet
-> 2. Warhol
-> 3. Rembrandt
+
+1. Who has the most NBA championships as a player?
+
+   1. Bill Russell
+   2. Michael Jordan
+   3. LeBron James
+
+2. How many points is a three pointer worth?
+
+   1. 1 point
+   2. 2 points
+   3. 3 points
+
+3. Which team does Stephen Curry play for?
+
+   1. Los Angeles Lakers
+   2. Golden State Warriors
+   3. Boston Celtics
+
+4. How many players from one team are on the court at one time?
+
+   1. 5 players
+   2. 6 players
+   3. 7 players
+
+5. Which position usually brings the ball up the court?
+
+   1. Center
+   2. Point guard
+   3. Power forward
 
 ## Variables
-> **DELETE AND REPLACE ME:** List the variables your program uses. For
-> each one, note what it stores and why you structured it that way,
-> especially for variables tracking results, explain whether a single
-> variable or multiple variables makes sense for your program's logic.
->
-> Example:
-> - `score` (int): tracks total quiz points. A single variable works here
->   since results are cumulative and only one final score matters.
-> - `decade_1920s_points`, `decade_1960s_points`, `decade_1980s_points`
->   (int): separate variables needed since multiple decades can tie for
->   highest score, one combined variable couldn't represent that.
-> - `user_choice` (str or int): stores the user's response to a question,
->   compared against expected options to decide which branch of the
->   conditional runs.
+
+* `score` (int): keeps track of the user's total score. One variable works because there is only one final score.
+
+* `answer1` (str): stores the user's answer to the first question.
+
+* `answer2` (str): stores the user's answer to the second question.
+
+* `answer3` (str): stores the user's answer to the third question.
+
+* `answer4` (str): stores the user's answer to the fourth question.
+
+* `answer5` (str): stores the user's answer to the fifth question.
 
 ## Conditional Logic Outline
-> **DELETE AND REPLACE ME:** Outline every conditional statement in your
-> program, in the order they appear. For each one, describe it in plain
-> language (no code needed): which question/condition it relates to,
-> each branch (`if`/`elif`/`else`), the exact condition that triggers
-> each branch, the action(s) that happen in each branch, and note any
-> nested conditionals and why they're nested.
->
-> Example:
-> - **Conditional statement 1** — related to "Which of the following
->   painters is an Impressionist? 1-Monet 2-Warhol 3-Rembrandt"
->   - `if` response is 1 (Monet): display congratulatory message,
->     increment `score` by 1
->   - `else`: display incorrect message and explain the correct answer
->
-> - **Conditional statement 2** — reveals final results based on `score`
->   - `if` score is 3: display high-knowledge message
->   - `elif` score is 1 or 2: display some-knowledge message
->   - `else`: display message encouraging the user to learn more
+
+* **Conditional statement 1**: Checks the user's answer to the question about who has the most NBA championships.
+
+  * `if` the response is 1: display a correct message and add 1 point to `score`.
+  * `else`: display an incorrect message and give the correct answer.
+
+* **Conditional statement 2**: Checks how many points a three pointer is worth.
+
+  * `if` the response is 3: display a correct message and add 1 point to `score`.
+  * `else`: display an incorrect message and give the correct answer.
+
+* **Conditional statement 3**: Checks which team Stephen Curry plays for.
+
+  * `if` the response is 2: display a correct message and add 1 point to `score`.
+  * `else`: display an incorrect message and give the correct answer.
+
+* **Conditional statement 4**: Checks how many players from one team are on the court.
+
+  * `if` the response is 1: display a correct message and add 1 point to `score`.
+  * `else`: display an incorrect message and give the correct answer.
+
+* **Conditional statement 5**: Checks which position usually brings the ball up the court.
+
+  * `if` the response is 2: display a correct message and add 1 point to `score`.
+  * `else`: display an incorrect message and give the correct answer.
+
+* **Conditional statement 6**: Determines the final message based on the user's score.
+
+  * `if` the score is 5: display a message saying the user got a perfect score.
+  * `elif` the score is greater than or equal to 3: display a message saying the user knows a lot about basketball.
+  * `elif` the score is greater than or equal to 1: display a message saying the user knows some basketball.
+  * `else`: display a message encouraging the user to learn more about basketball.
 
 ## How to Run
+
 1. Clone this repo
 2. Run `python3 main.py` or `python main.py`
 
 ## Demo Video
-[DELETE AND REPLACE ME: link to your 5-minute explanation video]
+
+[Add your 5-minute explanation video link here]
